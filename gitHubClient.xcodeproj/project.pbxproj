@@ -7,25 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59B38F031E7AB00300362B36 /* ReposListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F021E7AB00300362B36 /* ReposListVC.m */; };
+		59B38F061E7AB02900362B36 /* RepoDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F051E7AB02900362B36 /* RepoDetailsVC.m */; };
+		59B38F0B1E7AB0C500362B36 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F0A1E7AB0C500362B36 /* User.m */; };
+		59B38F111E7AB61700362B36 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F101E7AB61700362B36 /* Repository.m */; };
+		59B38F141E7AB63F00362B36 /* Commit.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F131E7AB63F00362B36 /* Commit.m */; };
+		59B38F171E7ACBFB00362B36 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F161E7ACBFB00362B36 /* DataManager.m */; };
 		59E049861E78B4DC001E8CB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E049851E78B4DC001E8CB1 /* main.m */; };
 		59E049891E78B4DC001E8CB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E049881E78B4DC001E8CB1 /* AppDelegate.m */; };
-		59E0498C1E78B4DC001E8CB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E0498B1E78B4DC001E8CB1 /* ViewController.m */; };
 		59E0498F1E78B4DC001E8CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E0498D1E78B4DC001E8CB1 /* Main.storyboard */; };
 		59E049911E78B4DC001E8CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59E049901E78B4DC001E8CB1 /* Assets.xcassets */; };
 		59E049941E78B4DC001E8CB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E049921E78B4DC001E8CB1 /* LaunchScreen.storyboard */; };
+		59E0499D1E78B9C2001E8CB1 /* GitHubHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E0499C1E78B9C2001E8CB1 /* GitHubHTTPClient.m */; };
+		59E049A21E799C52001E8CB1 /* LoginServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E049A11E799C52001E8CB1 /* LoginServices.m */; };
+		59E049A91E7A60E9001E8CB1 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E049A81E7A60E9001E8CB1 /* SignInVC.m */; };
+		643C4AA93B4C6226B71ADF8E /* libPods-gitHubClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99298F235FBCDD291536D96F /* libPods-gitHubClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34159365485EB446643290E1 /* Pods-gitHubClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitHubClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gitHubClient/Pods-gitHubClient.debug.xcconfig"; sourceTree = "<group>"; };
+		59B38F011E7AB00300362B36 /* ReposListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReposListVC.h; path = Controllers/ReposListVC.h; sourceTree = "<group>"; };
+		59B38F021E7AB00300362B36 /* ReposListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReposListVC.m; path = Controllers/ReposListVC.m; sourceTree = "<group>"; };
+		59B38F041E7AB02900362B36 /* RepoDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepoDetailsVC.h; path = "Repo Details/RepoDetailsVC.h"; sourceTree = "<group>"; };
+		59B38F051E7AB02900362B36 /* RepoDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepoDetailsVC.m; path = "Repo Details/RepoDetailsVC.m"; sourceTree = "<group>"; };
+		59B38F091E7AB0C500362B36 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Models/UserModel/User.h; sourceTree = "<group>"; };
+		59B38F0A1E7AB0C500362B36 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/UserModel/User.m; sourceTree = "<group>"; };
+		59B38F0F1E7AB61700362B36 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Repository.h; path = RepoModel/Repository.h; sourceTree = "<group>"; };
+		59B38F101E7AB61700362B36 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Repository.m; path = RepoModel/Repository.m; sourceTree = "<group>"; };
+		59B38F121E7AB63F00362B36 /* Commit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Commit.h; path = CommitModel/Commit.h; sourceTree = "<group>"; };
+		59B38F131E7AB63F00362B36 /* Commit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Commit.m; path = CommitModel/Commit.m; sourceTree = "<group>"; };
+		59B38F151E7ACBFB00362B36 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		59B38F161E7ACBFB00362B36 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		59E049811E78B4DC001E8CB1 /* gitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E049851E78B4DC001E8CB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59E049871E78B4DC001E8CB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59E049881E78B4DC001E8CB1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		59E0498A1E78B4DC001E8CB1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		59E0498B1E78B4DC001E8CB1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		59E0498E1E78B4DC001E8CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59E049901E78B4DC001E8CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59E049931E78B4DC001E8CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59E049951E78B4DC001E8CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59E0499B1E78B9C2001E8CB1 /* GitHubHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubHTTPClient.h; sourceTree = "<group>"; };
+		59E0499C1E78B9C2001E8CB1 /* GitHubHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubHTTPClient.m; sourceTree = "<group>"; };
+		59E049A01E799C52001E8CB1 /* LoginServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginServices.h; path = "Network Services/Login Services/LoginServices.h"; sourceTree = "<group>"; };
+		59E049A11E799C52001E8CB1 /* LoginServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginServices.m; path = "Network Services/Login Services/LoginServices.m"; sourceTree = "<group>"; };
+		59E049A71E7A60E9001E8CB1 /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInVC.h; path = Controllers/SignInVC.h; sourceTree = "<group>"; };
+		59E049A81E7A60E9001E8CB1 /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInVC.m; path = Controllers/SignInVC.m; sourceTree = "<group>"; };
+		59E049AA1E7A91D5001E8CB1 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		99298F235FBCDD291536D96F /* libPods-gitHubClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gitHubClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8C2A19F81FCD3ED92DCE9BF /* Pods-gitHubClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitHubClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-gitHubClient/Pods-gitHubClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +62,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643C4AA93B4C6226B71ADF8E /* libPods-gitHubClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59B38F071E7AB02E00362B36 /* Repo Details */ = {
+			isa = PBXGroup;
+			children = (
+				59B38F041E7AB02900362B36 /* RepoDetailsVC.h */,
+				59B38F051E7AB02900362B36 /* RepoDetailsVC.m */,
+			);
+			name = "Repo Details";
+			sourceTree = "<group>";
+		};
+		59B38F081E7AB06D00362B36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59B38F151E7ACBFB00362B36 /* DataManager.h */,
+				59B38F161E7ACBFB00362B36 /* DataManager.m */,
+				59B38F0E1E7AB5C900362B36 /* CommitModel */,
+				59B38F0D1E7AB5B500362B36 /* RepoModel */,
+				59B38F0C1E7AB0C900362B36 /* UserModel */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		59B38F0C1E7AB0C900362B36 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				59B38F091E7AB0C500362B36 /* User.h */,
+				59B38F0A1E7AB0C500362B36 /* User.m */,
+			);
+			name = UserModel;
+			sourceTree = "<group>";
+		};
+		59B38F0D1E7AB5B500362B36 /* RepoModel */ = {
+			isa = PBXGroup;
+			children = (
+				59B38F0F1E7AB61700362B36 /* Repository.h */,
+				59B38F101E7AB61700362B36 /* Repository.m */,
+			);
+			name = RepoModel;
+			sourceTree = "<group>";
+		};
+		59B38F0E1E7AB5C900362B36 /* CommitModel */ = {
+			isa = PBXGroup;
+			children = (
+				59B38F121E7AB63F00362B36 /* Commit.h */,
+				59B38F131E7AB63F00362B36 /* Commit.m */,
+			);
+			name = CommitModel;
+			sourceTree = "<group>";
+		};
 		59E049781E78B4DC001E8CB1 = {
 			isa = PBXGroup;
 			children = (
 				59E049831E78B4DC001E8CB1 /* gitHubClient */,
 				59E049821E78B4DC001E8CB1 /* Products */,
+				B4D7F178A86514A8BCC18E66 /* Pods */,
+				E05DBCBFC18BF058B4F8C184 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,15 +138,17 @@
 		59E049831E78B4DC001E8CB1 /* gitHubClient */ = {
 			isa = PBXGroup;
 			children = (
+				59B38F081E7AB06D00362B36 /* Models */,
+				59E049A61E7A60B8001E8CB1 /* Controllers */,
+				59E0499E1E799BB7001E8CB1 /* Network Services */,
 				59E049871E78B4DC001E8CB1 /* AppDelegate.h */,
 				59E049881E78B4DC001E8CB1 /* AppDelegate.m */,
-				59E0498A1E78B4DC001E8CB1 /* ViewController.h */,
-				59E0498B1E78B4DC001E8CB1 /* ViewController.m */,
 				59E0498D1E78B4DC001E8CB1 /* Main.storyboard */,
 				59E049901E78B4DC001E8CB1 /* Assets.xcassets */,
 				59E049921E78B4DC001E8CB1 /* LaunchScreen.storyboard */,
 				59E049951E78B4DC001E8CB1 /* Info.plist */,
 				59E049841E78B4DC001E8CB1 /* Supporting Files */,
+				59E049AA1E7A91D5001E8CB1 /* Constants.h */,
 			);
 			path = gitHubClient;
 			sourceTree = "<group>";
@@ -79,6 +161,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		59E0499E1E799BB7001E8CB1 /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+				59E0499B1E78B9C2001E8CB1 /* GitHubHTTPClient.h */,
+				59E0499C1E78B9C2001E8CB1 /* GitHubHTTPClient.m */,
+				59E0499F1E799BD5001E8CB1 /* Login Services */,
+			);
+			name = "Network Services";
+			sourceTree = "<group>";
+		};
+		59E0499F1E799BD5001E8CB1 /* Login Services */ = {
+			isa = PBXGroup;
+			children = (
+				59E049A01E799C52001E8CB1 /* LoginServices.h */,
+				59E049A11E799C52001E8CB1 /* LoginServices.m */,
+			);
+			name = "Login Services";
+			sourceTree = "<group>";
+		};
+		59E049A61E7A60B8001E8CB1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59B38F071E7AB02E00362B36 /* Repo Details */,
+				59E049A71E7A60E9001E8CB1 /* SignInVC.h */,
+				59E049A81E7A60E9001E8CB1 /* SignInVC.m */,
+				59B38F011E7AB00300362B36 /* ReposListVC.h */,
+				59B38F021E7AB00300362B36 /* ReposListVC.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B4D7F178A86514A8BCC18E66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34159365485EB446643290E1 /* Pods-gitHubClient.debug.xcconfig */,
+				E8C2A19F81FCD3ED92DCE9BF /* Pods-gitHubClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E05DBCBFC18BF058B4F8C184 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99298F235FBCDD291536D96F /* libPods-gitHubClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59E049981E78B4DC001E8CB1 /* Build configuration list for PBXNativeTarget "gitHubClient" */;
 			buildPhases = (
+				8FC22991AFDA760BFC8F33D7 /* 📦 Check Pods Manifest.lock */,
 				59E0497D1E78B4DC001E8CB1 /* Sources */,
 				59E0497E1E78B4DC001E8CB1 /* Frameworks */,
 				59E0497F1E78B4DC001E8CB1 /* Resources */,
+				BB764E5E6F33B9970DB1E442 /* 📦 Embed Pods Frameworks */,
+				0049DD5D36513F0F5D98B759 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,14 +279,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0049DD5D36513F0F5D98B759 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gitHubClient/Pods-gitHubClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FC22991AFDA760BFC8F33D7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB764E5E6F33B9970DB1E442 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gitHubClient/Pods-gitHubClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		59E0497D1E78B4DC001E8CB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59E0498C1E78B4DC001E8CB1 /* ViewController.m in Sources */,
+				59B38F0B1E7AB0C500362B36 /* User.m in Sources */,
+				59E0499D1E78B9C2001E8CB1 /* GitHubHTTPClient.m in Sources */,
 				59E049891E78B4DC001E8CB1 /* AppDelegate.m in Sources */,
+				59B38F031E7AB00300362B36 /* ReposListVC.m in Sources */,
+				59B38F141E7AB63F00362B36 /* Commit.m in Sources */,
+				59E049A91E7A60E9001E8CB1 /* SignInVC.m in Sources */,
+				59B38F061E7AB02900362B36 /* RepoDetailsVC.m in Sources */,
 				59E049861E78B4DC001E8CB1 /* main.m in Sources */,
+				59B38F111E7AB61700362B36 /* Repository.m in Sources */,
+				59B38F171E7ACBFB00362B36 /* DataManager.m in Sources */,
+				59E049A21E799C52001E8CB1 /* LoginServices.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +458,7 @@
 		};
 		59E049991E78B4DC001E8CB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34159365485EB446643290E1 /* Pods-gitHubClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9QBK9S48W2;
@@ -281,6 +471,7 @@
 		};
 		59E0499A1E78B4DC001E8CB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C2A19F81FCD3ED92DCE9BF /* Pods-gitHubClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9QBK9S48W2;
@@ -310,6 +501,7 @@
 				59E0499A1E78B4DC001E8CB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

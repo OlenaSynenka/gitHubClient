@@ -34,5 +34,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>github.com/OlenaSynenka/gitHubClient</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>github_client.com</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

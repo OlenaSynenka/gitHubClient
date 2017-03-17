@@ -8,18 +8,11 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-@protocol APIHTTPClientDelegate;
 
 @interface GitHubHTTPClient : AFHTTPSessionManager
 
-@property (nonatomic, weak) id<APIHTTPClientDelegate>delegate;
-
 + (GitHubHTTPClient *)sharedGitHubHTTPClient;
+- (NSDictionary *)handleError:(NSError *)error;
 
 @end
 
-@protocol APIHTTPClientDelegate <NSObject>
-
--(void)gitHubHTTPClient:(GitHubHTTPClient *)client didFailWithError:(NSError *)error;
-
-@end

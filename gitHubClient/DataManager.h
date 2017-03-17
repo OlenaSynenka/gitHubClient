@@ -13,6 +13,6 @@
 
 + (instancetype) sharedDataManager;
 
-@property (strong, nonatomic) User *currentUser;
+@property (strong, nonatomic) NSMutableArray *repos;
 
 @end

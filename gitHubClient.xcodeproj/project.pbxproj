@@ -13,13 +13,18 @@
 		59B38F111E7AB61700362B36 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F101E7AB61700362B36 /* Repository.m */; };
 		59B38F141E7AB63F00362B36 /* Commit.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F131E7AB63F00362B36 /* Commit.m */; };
 		59B38F171E7ACBFB00362B36 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F161E7ACBFB00362B36 /* DataManager.m */; };
+		59CCE0201E7AE7D6007DA2CE /* RepoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE01E1E7AE7D6007DA2CE /* RepoTableViewCell.m */; };
+		59CCE0211E7AE7D6007DA2CE /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59CCE01F1E7AE7D6007DA2CE /* RepoTableViewCell.xib */; };
+		59CCE0251E7AEB8E007DA2CE /* CommitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE0231E7AEB8E007DA2CE /* CommitTableViewCell.m */; };
+		59CCE0261E7AEB8E007DA2CE /* CommitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59CCE0241E7AEB8E007DA2CE /* CommitTableViewCell.xib */; };
+		59CCE0291E7AEEBC007DA2CE /* NetworkingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE0281E7AEEBC007DA2CE /* NetworkingServices.m */; };
+		59CCE02D1E7B31CB007DA2CE /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE02C1E7B31CB007DA2CE /* KeychainWrapper.m */; };
 		59E049861E78B4DC001E8CB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E049851E78B4DC001E8CB1 /* main.m */; };
 		59E049891E78B4DC001E8CB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E049881E78B4DC001E8CB1 /* AppDelegate.m */; };
 		59E0498F1E78B4DC001E8CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E0498D1E78B4DC001E8CB1 /* Main.storyboard */; };
 		59E049911E78B4DC001E8CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59E049901E78B4DC001E8CB1 /* Assets.xcassets */; };
 		59E049941E78B4DC001E8CB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59E049921E78B4DC001E8CB1 /* LaunchScreen.storyboard */; };
 		59E0499D1E78B9C2001E8CB1 /* GitHubHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E0499C1E78B9C2001E8CB1 /* GitHubHTTPClient.m */; };
-		59E049A21E799C52001E8CB1 /* LoginServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E049A11E799C52001E8CB1 /* LoginServices.m */; };
 		59E049A91E7A60E9001E8CB1 /* SignInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E049A81E7A60E9001E8CB1 /* SignInVC.m */; };
 		643C4AA93B4C6226B71ADF8E /* libPods-gitHubClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99298F235FBCDD291536D96F /* libPods-gitHubClient.a */; };
 /* End PBXBuildFile section */
@@ -38,6 +43,16 @@
 		59B38F131E7AB63F00362B36 /* Commit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Commit.m; path = CommitModel/Commit.m; sourceTree = "<group>"; };
 		59B38F151E7ACBFB00362B36 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		59B38F161E7ACBFB00362B36 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		59CCE01D1E7AE7D6007DA2CE /* RepoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepoTableViewCell.h; path = Views/RepoTableViewCell.h; sourceTree = "<group>"; };
+		59CCE01E1E7AE7D6007DA2CE /* RepoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepoTableViewCell.m; path = Views/RepoTableViewCell.m; sourceTree = "<group>"; };
+		59CCE01F1E7AE7D6007DA2CE /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RepoTableViewCell.xib; path = Views/RepoTableViewCell.xib; sourceTree = "<group>"; };
+		59CCE0221E7AEB8E007DA2CE /* CommitTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommitTableViewCell.h; path = Views/CommitTableViewCell.h; sourceTree = "<group>"; };
+		59CCE0231E7AEB8E007DA2CE /* CommitTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommitTableViewCell.m; path = Views/CommitTableViewCell.m; sourceTree = "<group>"; };
+		59CCE0241E7AEB8E007DA2CE /* CommitTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommitTableViewCell.xib; path = Views/CommitTableViewCell.xib; sourceTree = "<group>"; };
+		59CCE0271E7AEEBC007DA2CE /* NetworkingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkingServices.h; path = "Network Services/NetworkingServices.h"; sourceTree = "<group>"; };
+		59CCE0281E7AEEBC007DA2CE /* NetworkingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkingServices.m; path = "Network Services/NetworkingServices.m"; sourceTree = "<group>"; };
+		59CCE02B1E7B31CB007DA2CE /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		59CCE02C1E7B31CB007DA2CE /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		59E049811E78B4DC001E8CB1 /* gitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E049851E78B4DC001E8CB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59E049871E78B4DC001E8CB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,8 +63,6 @@
 		59E049951E78B4DC001E8CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59E0499B1E78B9C2001E8CB1 /* GitHubHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubHTTPClient.h; sourceTree = "<group>"; };
 		59E0499C1E78B9C2001E8CB1 /* GitHubHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubHTTPClient.m; sourceTree = "<group>"; };
-		59E049A01E799C52001E8CB1 /* LoginServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginServices.h; path = "Network Services/Login Services/LoginServices.h"; sourceTree = "<group>"; };
-		59E049A11E799C52001E8CB1 /* LoginServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginServices.m; path = "Network Services/Login Services/LoginServices.m"; sourceTree = "<group>"; };
 		59E049A71E7A60E9001E8CB1 /* SignInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInVC.h; path = Controllers/SignInVC.h; sourceTree = "<group>"; };
 		59E049A81E7A60E9001E8CB1 /* SignInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInVC.m; path = Controllers/SignInVC.m; sourceTree = "<group>"; };
 		59E049AA1E7A91D5001E8CB1 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -69,6 +82,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592328461E7BD4DB00558483 /* RepoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				59CCE01D1E7AE7D6007DA2CE /* RepoTableViewCell.h */,
+				59CCE01E1E7AE7D6007DA2CE /* RepoTableViewCell.m */,
+				59CCE01F1E7AE7D6007DA2CE /* RepoTableViewCell.xib */,
+			);
+			name = RepoTableViewCell;
+			sourceTree = "<group>";
+		};
+		592328471E7BD4F000558483 /* CommitTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				59CCE0221E7AEB8E007DA2CE /* CommitTableViewCell.h */,
+				59CCE0231E7AEB8E007DA2CE /* CommitTableViewCell.m */,
+				59CCE0241E7AEB8E007DA2CE /* CommitTableViewCell.xib */,
+			);
+			name = CommitTableViewCell;
+			sourceTree = "<group>";
+		};
 		59B38F071E7AB02E00362B36 /* Repo Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +150,42 @@
 			name = CommitModel;
 			sourceTree = "<group>";
 		};
+		59CCE01C1E7AE787007DA2CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				592328471E7BD4F000558483 /* CommitTableViewCell */,
+				592328461E7BD4DB00558483 /* RepoTableViewCell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		59CCE02A1E7B318F007DA2CE /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				59CCE02B1E7B31CB007DA2CE /* KeychainWrapper.h */,
+				59CCE02C1E7B31CB007DA2CE /* KeychainWrapper.m */,
+			);
+			name = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+		59CCE02E1E7B3351007DA2CE /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				59E049A71E7A60E9001E8CB1 /* SignInVC.h */,
+				59E049A81E7A60E9001E8CB1 /* SignInVC.m */,
+			);
+			name = SignIn;
+			sourceTree = "<group>";
+		};
+		59CCE02F1E7B335E007DA2CE /* ReposList */ = {
+			isa = PBXGroup;
+			children = (
+				59B38F011E7AB00300362B36 /* ReposListVC.h */,
+				59B38F021E7AB00300362B36 /* ReposListVC.m */,
+			);
+			name = ReposList;
+			sourceTree = "<group>";
+		};
 		59E049781E78B4DC001E8CB1 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +207,8 @@
 		59E049831E78B4DC001E8CB1 /* gitHubClient */ = {
 			isa = PBXGroup;
 			children = (
+				59CCE02A1E7B318F007DA2CE /* KeychainWrapper */,
+				59CCE01C1E7AE787007DA2CE /* Views */,
 				59B38F081E7AB06D00362B36 /* Models */,
 				59E049A61E7A60B8001E8CB1 /* Controllers */,
 				59E0499E1E799BB7001E8CB1 /* Network Services */,
@@ -166,28 +237,26 @@
 			children = (
 				59E0499B1E78B9C2001E8CB1 /* GitHubHTTPClient.h */,
 				59E0499C1E78B9C2001E8CB1 /* GitHubHTTPClient.m */,
-				59E0499F1E799BD5001E8CB1 /* Login Services */,
+				59E0499F1E799BD5001E8CB1 /* Services */,
 			);
 			name = "Network Services";
 			sourceTree = "<group>";
 		};
-		59E0499F1E799BD5001E8CB1 /* Login Services */ = {
+		59E0499F1E799BD5001E8CB1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				59E049A01E799C52001E8CB1 /* LoginServices.h */,
-				59E049A11E799C52001E8CB1 /* LoginServices.m */,
+				59CCE0271E7AEEBC007DA2CE /* NetworkingServices.h */,
+				59CCE0281E7AEEBC007DA2CE /* NetworkingServices.m */,
 			);
-			name = "Login Services";
+			name = Services;
 			sourceTree = "<group>";
 		};
 		59E049A61E7A60B8001E8CB1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				59CCE02F1E7B335E007DA2CE /* ReposList */,
+				59CCE02E1E7B3351007DA2CE /* SignIn */,
 				59B38F071E7AB02E00362B36 /* Repo Details */,
-				59E049A71E7A60E9001E8CB1 /* SignInVC.h */,
-				59E049A81E7A60E9001E8CB1 /* SignInVC.m */,
-				59B38F011E7AB00300362B36 /* ReposListVC.h */,
-				59B38F021E7AB00300362B36 /* ReposListVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +343,8 @@
 				59E049941E78B4DC001E8CB1 /* LaunchScreen.storyboard in Resources */,
 				59E049911E78B4DC001E8CB1 /* Assets.xcassets in Resources */,
 				59E0498F1E78B4DC001E8CB1 /* Main.storyboard in Resources */,
+				59CCE0211E7AE7D6007DA2CE /* RepoTableViewCell.xib in Resources */,
+				59CCE0261E7AEB8E007DA2CE /* CommitTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,14 +406,17 @@
 				59B38F0B1E7AB0C500362B36 /* User.m in Sources */,
 				59E0499D1E78B9C2001E8CB1 /* GitHubHTTPClient.m in Sources */,
 				59E049891E78B4DC001E8CB1 /* AppDelegate.m in Sources */,
+				59CCE0291E7AEEBC007DA2CE /* NetworkingServices.m in Sources */,
 				59B38F031E7AB00300362B36 /* ReposListVC.m in Sources */,
 				59B38F141E7AB63F00362B36 /* Commit.m in Sources */,
 				59E049A91E7A60E9001E8CB1 /* SignInVC.m in Sources */,
 				59B38F061E7AB02900362B36 /* RepoDetailsVC.m in Sources */,
+				59CCE0251E7AEB8E007DA2CE /* CommitTableViewCell.m in Sources */,
+				59CCE0201E7AE7D6007DA2CE /* RepoTableViewCell.m in Sources */,
 				59E049861E78B4DC001E8CB1 /* main.m in Sources */,
+				59CCE02D1E7B31CB007DA2CE /* KeychainWrapper.m in Sources */,
 				59B38F111E7AB61700362B36 /* Repository.m in Sources */,
 				59B38F171E7ACBFB00362B36 /* DataManager.m in Sources */,
-				59E049A21E799C52001E8CB1 /* LoginServices.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

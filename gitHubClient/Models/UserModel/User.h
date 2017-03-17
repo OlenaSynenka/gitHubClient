@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *avatarURL;
 
-@property (nonatomic, strong) NSArray * repos;
+- (instancetype)initWithName:(NSString *)name avatarURL:(NSString *)avatarURL;
+- (instancetype)initWithUser:(User *)user;
 
 @end

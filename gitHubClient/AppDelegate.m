@@ -8,6 +8,9 @@
 
 
 #import "AppDelegate.h"
+#import "KeychainWrapper.h"
+#import "ReposListVC.h"
+#import "GitHubHTTPClient.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +21,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    KeychainWrapper *keychainWrapper = [KeychainWrapper new];
+    NSString *accessToken = [keychainWrapper myObjectForKey:(NSString *)kSecValueData];
+    if (accessToken.length > 0 && (![accessToken isEqualToString:@"password"])) {
+        [[GitHubHTTPClient sharedGitHubHTTPClient].requestSerializer setValue:[NSString stringWithFormat:@"token %@",accessToken] forHTTPHeaderField:@"Authorization"];
+        
+        UINavigationController *navigationController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"UINavigationController"];
+        self.window.rootViewController = navigationController;
+            [self.window makeKeyAndVisible];
+    }
+    
     return YES;
 }
 

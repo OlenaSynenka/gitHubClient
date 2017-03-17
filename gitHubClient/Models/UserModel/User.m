@@ -10,4 +10,17 @@
 
 @implementation User
 
+- (instancetype)initWithName:(NSString *)name avatarURL:(NSString *)avatarURL {
+    self = [super init];
+    if (self) {
+        _name = name;
+        _avatarURL = avatarURL;
+
+    }
+    return self;
+}
+- (instancetype)initWithUser:(User *)user {
+   return [self initWithName:user.name avatarURL:user.avatarURL];
+}
+
 @end

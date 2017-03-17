@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommitTableViewCell" rowHeight="76" id="KGk-i7-Jjw" customClass="CommitTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="OlenaSynenka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nr-fW-6H5">
+                        <rect key="frame" x="8" y="0.0" width="106" height="19"/>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
+                        <color key="textColor" red="0.17922465600000001" green="0.39296874999999998" blue="0.29958020419999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01.01.2-18" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCp-Rp-U63">
+                        <rect key="frame" x="323" y="13.5" width="50" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="olena.synenka@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QiZ-ul-MNI">
+                        <rect key="frame" x="234" y="0.0" width="139" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0i-LS-qWM">
+                        <rect key="frame" x="8" y="29.5" width="39" height="19"/>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="p0i-LS-qWM" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-4" id="6a6-sH-uXe"/>
+                    <constraint firstItem="9Nr-fW-6H5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="7j7-Px-jcL"/>
+                    <constraint firstItem="9Nr-fW-6H5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8jt-Z4-T6P"/>
+                    <constraint firstItem="QiZ-ul-MNI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FQZ-Fc-wWP"/>
+                    <constraint firstItem="rCp-Rp-U63" firstAttribute="top" secondItem="QiZ-ul-MNI" secondAttribute="bottom" id="KFn-B7-vaJ"/>
+                    <constraint firstItem="p0i-LS-qWM" firstAttribute="top" secondItem="rCp-Rp-U63" secondAttribute="bottom" constant="4" id="M4n-MJ-pMP"/>
+                    <constraint firstAttribute="trailing" secondItem="QiZ-ul-MNI" secondAttribute="trailing" constant="8" id="Srx-bR-DiM"/>
+                    <constraint firstItem="rCp-Rp-U63" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="kec-bR-sUa"/>
+                    <constraint firstItem="p0i-LS-qWM" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="lqC-cF-JzL"/>
+                    <constraint firstItem="p0i-LS-qWM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="omu-Sn-FYE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commitMassegeLabel" destination="p0i-LS-qWM" id="kuh-6X-dfB"/>
+                <outlet property="committerEmailLabel" destination="QiZ-ul-MNI" id="Thq-LF-tG6"/>
+                <outlet property="committerNameLabel" destination="9Nr-fW-6H5" id="n3p-Vh-sv5"/>
+                <outlet property="cretionDateLabel" destination="rCp-Rp-U63" id="lJD-qM-4AH"/>
+            </connections>
+            <point key="canvasLocation" x="-155.5" y="34"/>
+        </tableViewCell>
+    </objects>
+</document>

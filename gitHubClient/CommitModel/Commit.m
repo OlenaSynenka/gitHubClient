@@ -10,4 +10,19 @@
 
 @implementation Commit
 
+- (instancetype)initWithDescription:(NSString *)description
+                         authorName:(NSString *)authorName
+                        authorEmail:(NSString *)authtoEmail
+                       creationDate:(NSString *)creationDate {
+    self = [super init];
+    if (self) {
+        _commitDescription= description;
+        _authorName = authorName;
+        _authorEmail = authtoEmail;
+        _created = creationDate;
+    }
+    return self;
+}
+
+
 @end

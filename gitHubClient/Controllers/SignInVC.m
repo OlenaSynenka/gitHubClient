@@ -7,8 +7,9 @@
 //
 
 #import "SignInVC.h"
-#import "LoginServices.h"
+#import "NetworkingServices.h"
 #import "Constants.h"
+#import "GitHubHTTPClient.h"
 
 const NSString *base_url = @"https://github.com";
 
@@ -46,16 +47,22 @@ const NSString *base_url = @"https://github.com";
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     NSURL *callbackURL = navigationAction.request.URL;
     if ([[callbackURL resourceSpecifier] hasPrefix:@"//github_client/callback"]) {
-        [webView removeFromSuperview];
         
         NSArray *queryItems = [[NSURLComponents componentsWithURL:callbackURL resolvingAgainstBaseURL:NO] queryItems];
         NSString *code = ((NSURLQueryItem *)[queryItems firstObject]).value;
         
-        LoginServices *loginServices = [LoginServices new];
-        [loginServices getAccessTokenWithCode:code];
+        NetworkingServices *services = [NetworkingServices new];
+        [[services getAccessTokenWithCode:code] subscribeCompleted:^{
+            [self performSegueWithIdentifier:@"showRepoList" sender:self];
+        }];
     }
     decisionHandler(WKNavigationActionPolicyAllow);
 }
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
+    [[GitHubHTTPClient sharedGitHubHTTPClient] handleError:error];
+}
+
 
 /*
 #pragma mark - Navigation

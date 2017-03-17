@@ -11,8 +11,13 @@
 @interface Commit : NSObject
 
 @property (nonatomic, strong) NSString *commitDescription;
-@property (nonatomic, strong) NSString *author;
+@property (nonatomic, strong) NSString *authorName;
+@property (nonatomic, strong) NSString *authorEmail;
 @property (nonatomic, strong) NSString *created;
 
+- (instancetype)initWithDescription:(NSString *)description
+                         authorName:(NSString *)authorName
+                        authorEmail:(NSString *)authtoEmail
+                       creationDate:(NSString *)creationDate;
 
 @end

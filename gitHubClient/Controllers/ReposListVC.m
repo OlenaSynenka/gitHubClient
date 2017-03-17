@@ -139,9 +139,5 @@
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
-- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-    [[GitHubHTTPClient sharedGitHubHTTPClient] handleError:error];
-}
-
 
 @end

@@ -59,10 +59,6 @@ const NSString *base_url = @"https://github.com";
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
-- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-}
-
-
 /*
 #pragma mark - Navigation
 

@@ -60,7 +60,6 @@ const NSString *base_url = @"https://github.com";
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-    [[GitHubHTTPClient sharedGitHubHTTPClient] handleError:error];
 }
 
 

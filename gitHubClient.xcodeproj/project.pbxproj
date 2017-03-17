@@ -12,7 +12,6 @@
 		59B38F0B1E7AB0C500362B36 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F0A1E7AB0C500362B36 /* User.m */; };
 		59B38F111E7AB61700362B36 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F101E7AB61700362B36 /* Repository.m */; };
 		59B38F141E7AB63F00362B36 /* Commit.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F131E7AB63F00362B36 /* Commit.m */; };
-		59B38F171E7ACBFB00362B36 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B38F161E7ACBFB00362B36 /* DataManager.m */; };
 		59CCE0201E7AE7D6007DA2CE /* RepoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE01E1E7AE7D6007DA2CE /* RepoTableViewCell.m */; };
 		59CCE0211E7AE7D6007DA2CE /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59CCE01F1E7AE7D6007DA2CE /* RepoTableViewCell.xib */; };
 		59CCE0251E7AEB8E007DA2CE /* CommitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CCE0231E7AEB8E007DA2CE /* CommitTableViewCell.m */; };
@@ -41,8 +40,6 @@
 		59B38F101E7AB61700362B36 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Repository.m; path = RepoModel/Repository.m; sourceTree = "<group>"; };
 		59B38F121E7AB63F00362B36 /* Commit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Commit.h; path = CommitModel/Commit.h; sourceTree = "<group>"; };
 		59B38F131E7AB63F00362B36 /* Commit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Commit.m; path = CommitModel/Commit.m; sourceTree = "<group>"; };
-		59B38F151E7ACBFB00362B36 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		59B38F161E7ACBFB00362B36 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		59CCE01D1E7AE7D6007DA2CE /* RepoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepoTableViewCell.h; path = Views/RepoTableViewCell.h; sourceTree = "<group>"; };
 		59CCE01E1E7AE7D6007DA2CE /* RepoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RepoTableViewCell.m; path = Views/RepoTableViewCell.m; sourceTree = "<group>"; };
 		59CCE01F1E7AE7D6007DA2CE /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RepoTableViewCell.xib; path = Views/RepoTableViewCell.xib; sourceTree = "<group>"; };
@@ -114,8 +111,6 @@
 		59B38F081E7AB06D00362B36 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				59B38F151E7ACBFB00362B36 /* DataManager.h */,
-				59B38F161E7ACBFB00362B36 /* DataManager.m */,
 				59B38F0E1E7AB5C900362B36 /* CommitModel */,
 				59B38F0D1E7AB5B500362B36 /* RepoModel */,
 				59B38F0C1E7AB0C900362B36 /* UserModel */,
@@ -416,7 +411,6 @@
 				59E049861E78B4DC001E8CB1 /* main.m in Sources */,
 				59CCE02D1E7B31CB007DA2CE /* KeychainWrapper.m in Sources */,
 				59B38F111E7AB61700362B36 /* Repository.m in Sources */,
-				59B38F171E7ACBFB00362B36 /* DataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

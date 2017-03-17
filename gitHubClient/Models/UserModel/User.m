@@ -15,12 +15,8 @@
     if (self) {
         _name = name;
         _avatarURL = avatarURL;
-
     }
     return self;
-}
-- (instancetype)initWithUser:(User *)user {
-   return [self initWithName:user.name avatarURL:user.avatarURL];
 }
 
 @end

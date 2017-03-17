@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *avatarURL;
 
-- (instancetype)initWithName:(NSString *)name avatarURL:(NSString *)avatarURL;
-- (instancetype)initWithUser:(User *)user;
+- (instancetype)initWithName:(NSString *)name
+                   avatarURL:(NSString *)avatarURL;
 
 @end

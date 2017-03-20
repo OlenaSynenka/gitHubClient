@@ -47,9 +47,9 @@
     }];
 }
 
-- (RACSignal *)getCurrentUserRepos {
+- (RACSignal *)getCurrentUserReposForPage:(NSInteger)page {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSString *tenantURL = [NSString stringWithFormat:@"/user/repos"];
+        NSString *tenantURL = [NSString stringWithFormat:@"/user/repos?page=%ld", (long)page];
         [[GitHubHTTPClient sharedGitHubHTTPClient] GET:tenantURL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSMutableArray *repos  = [NSMutableArray new];
             for (NSDictionary *dictionary in responseObject) {
@@ -68,9 +68,9 @@
     }];
 }
 
-- (RACSignal *)getCommitsForUserWithName:(NSString *)username repoWithName:(NSString *)repoName {
+- (RACSignal *)getCommitsForUserWithName:(NSString *)username repoWithName:(NSString *)repoName forPage:(NSInteger)page {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSString *tenantURL = [NSString stringWithFormat:@"/repos/%@/%@/commits", username, repoName];
+        NSString *tenantURL = [NSString stringWithFormat:@"/repos/%@/%@/commits?page=%ld", username, repoName, (long)page];
         [[GitHubHTTPClient sharedGitHubHTTPClient] GET:tenantURL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSMutableArray *commits  = [NSMutableArray new];
             for (NSDictionary *dictionary in responseObject) {

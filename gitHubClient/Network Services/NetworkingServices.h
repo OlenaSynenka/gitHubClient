@@ -14,6 +14,6 @@
 
 - (RACSignal *)getAccessTokenWithCode:(NSString *)code;
 
-- (RACSignal *)getCurrentUserRepos;
-- (RACSignal *)getCommitsForUserWithName:(NSString *)username repoWithName:(NSString *)repoName;
+- (RACSignal *)getCurrentUserReposForPage:(NSInteger)page;
+- (RACSignal *)getCommitsForUserWithName:(NSString *)username repoWithName:(NSString *)repoName forPage:(NSInteger)page;
 @end

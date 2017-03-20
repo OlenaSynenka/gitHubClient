@@ -22,6 +22,10 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *repos;
+@property (nonatomic, strong) NetworkingServices *networkingServices;
+
+@property (nonatomic, assign) BOOL isPageRefresing;
+@property (nonatomic, assign) NSInteger currentPageNumber;
 
 @end
 
@@ -31,6 +35,9 @@
     [super viewDidLoad];
     
     self.repos = [NSMutableArray new];
+    self.networkingServices = [NetworkingServices new];
+    self.isPageRefresing = NO;
+    self.currentPageNumber = 1;
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RepoTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([RepoTableViewCell class])];
     
@@ -38,8 +45,7 @@
     self.tableView.estimatedRowHeight = 40;
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NetworkingServices * services = [NetworkingServices new];
-    [[services getCurrentUserRepos] subscribeNext:^(NSArray *repos) {
+    [[self.networkingServices getCurrentUserReposForPage:1] subscribeNext:^(NSArray *repos) {
         self.repos = [repos mutableCopy];
         [self.tableView reloadData];
         [hud hideAnimated:YES];
@@ -112,8 +118,27 @@
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"showRepoCommits" sender:self];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height)) {
+        
+        if(!self.isPageRefresing){ // no need to worry about threads because this is always on main thread.
+            
+            self.isPageRefresing = YES;
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            self.currentPageNumber = self.currentPageNumber +1;
+           [[self.networkingServices getCurrentUserReposForPage:self.currentPageNumber] subscribeNext:^(NSArray *nextRepos) {
+               [self.repos addObjectsFromArray:nextRepos];
+               [hud hideAnimated:YES];
+               self.isPageRefresing = NO;
+           }];
+            
+        }
+    }
 }
 
 #pragma mark - Navigation

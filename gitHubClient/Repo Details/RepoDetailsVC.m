@@ -17,6 +17,10 @@
 
 @property ( nonatomic, strong) NSMutableArray *commits;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NetworkingServices *networkingServices;
+
+@property (nonatomic, assign) BOOL isPageRefresing;
+@property (nonatomic, assign) NSInteger currentPageNumber;
 
 @end
 
@@ -26,15 +30,17 @@
     [super viewDidLoad];
    
     self.commits = [NSMutableArray new];
+    self.isPageRefresing = NO;
+    self.currentPageNumber = 1;
+    self.networkingServices = [NetworkingServices new];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommitTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([CommitTableViewCell class])];
         
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 40;
     
-    NetworkingServices * services = [NetworkingServices new];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [[services getCommitsForUserWithName:self.repo.author.name repoWithName:self.repo.name] subscribeNext:^(NSArray *commits) {
+    [[self.networkingServices getCommitsForUserWithName:self.repo.author.name repoWithName:self.repo.name forPage:1] subscribeNext:^(NSArray *commits) {
         self.commits = [commits mutableCopy];
         [self.tableView reloadData];
         [hud hideAnimated:YES];
@@ -78,6 +84,25 @@
     cell.cretionDateLabel.text = commit.created;
     
     return cell;
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height)) {
+        
+        if(!self.isPageRefresing){
+            self.isPageRefresing = YES;
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            self.currentPageNumber = self.currentPageNumber +1;
+            [[self.networkingServices getCommitsForUserWithName:self.repo.author.name repoWithName:self.repo.name forPage:self.currentPageNumber] subscribeNext:^(NSArray *nextCommits) {
+                [self.commits addObjectsFromArray:nextCommits];
+                [hud hideAnimated:YES];
+                self.isPageRefresing = NO;
+            }];
+            
+        }
+    }
 }
 
 
